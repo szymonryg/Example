@@ -2,7 +2,7 @@
 
 int main() {
     game_model model;
-    game_view view;
+    game_view view(model);
     game_controller game(model, view);
 
     game.launch();

@@ -5,10 +5,14 @@
 #ifndef EXAMPLE_GAME_VIEW_H
 #define EXAMPLE_GAME_VIEW_H
 
+#include "game_model.h"
 
 class game_view {
 public:
-    void update(int p);
+    explicit game_view(game_model& model);
+    void update();
+private:
+    game_model& model;
 };
 
 

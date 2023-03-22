@@ -4,10 +4,14 @@
 #include <iostream>
 #include "game_view.h"
 
-void game_view::update(int p) {
+game_view::game_view(game_model& model) : model(model) {
+
+}
+
+void game_view::update() {
     system("cls");
     std::cout << "Console clicker\n";
-    std::cout << "Points: " << p << std::endl;
+    std::cout << "Points: " << this->model.get_points() << std::endl;
 }
 
 
