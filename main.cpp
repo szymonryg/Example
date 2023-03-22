@@ -1,5 +1,4 @@
 #include "game_controller.h"
-#include "game_model.h"
 
 int main() {
     game_model model;
