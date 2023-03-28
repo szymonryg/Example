@@ -8,8 +8,28 @@ int game_model::get_points() {
     return this->points;
 }
 
-void game_model::add_points(int p) {
-    this->points += p;
-
+int game_model::get_lvl() {
+    return this->lvl;
 }
+
+int game_model::get_next_lvl_points() {
+    return this->points_for_next_lvl;
+}
+
+void game_model::add_points() {
+    this->points += this->multiplier;
+}
+
+void game_model::lvl_up() {
+    this->lvl += 1;
+    this->points_for_next_lvl *= 2;
+    if(this->lvl % 3 == 0) {
+        this->multiplier += 1;
+    }
+}
+
+
+
+
+
 
